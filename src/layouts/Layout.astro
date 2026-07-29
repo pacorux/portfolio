@@ -1,22 +1,27 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
+import "../components/Background.astro";
+import Background from "../components/Background.astro";
 
 const {
-  title = "Pacorux | Web Developer",
+  title = "Pacorux | Desarrollador Web",
   author = "Pacorux",
-  description = "Personal portfolio showcasing web development projects and skills.",
+  description = "Portafolio personal para mostrar proyectos en desarrollo web",
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>{title}</title>
+
+    <!-- About -->
     <meta name="author" content={author} />
     <meta name="description" content={description} />
-    <title>{title}</title>
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
@@ -27,21 +32,6 @@ const {
   </head>
   <body>
     <slot />
+    <Background />
   </body>
 </html>
-
-<style>
-  :root {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-
-    font-synthesis: none;
-
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-  }
-</style>
