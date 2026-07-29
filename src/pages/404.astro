@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="flex flex-col items-center justify-center h-screen pb-8">
+    <header class="group flex flex-col items-center text-8xl select-none">
+      <img
+        src="/logo.svg"
+        class="h-32 w-32 group-hover:scale-105 active:scale-95 duration-300 transition-transform cursor-pointer"
+        height="128"
+        width="128"
+        draggable="false"
+      />
+      <h2 class="font-gluten text-accent font-extrabold tracking-tight">404</h2>
+    </header>
+
+    <main class="flex flex-col items-center">
+      <p class="text-accent-soft-foreground text-xl tracking-wide">
+        Se ha ido a por tabaco
+      </p>
+
+      <div class="mt-22">
+        <a href="/" class="link">Volver a la zona de no fumadores</a>
+      </div>
+    </main>
+  </div>
+</Layout>
