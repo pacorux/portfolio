@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import "../components/Background.astro";
 import Background from "../components/Background.astro";
+import ScrollUpButton from "../components/ScrollUpButton.astro";
 
 const {
   title = "Pacorux | Desarrollador Web",
@@ -32,6 +33,8 @@ const {
   </head>
   <body>
     <slot />
+
+    <ScrollUpButton />
     <Background />
   </body>
 </html>

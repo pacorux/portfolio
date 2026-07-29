@@ -1,0 +1,37 @@
+---
+import { ArrowUp } from "@lucide/astro";
+---
+
+<div class="fixed bottom-10 right-10 z-10">
+  <a
+    href="/#"
+    class="flex p-2 rounded-(--radius) bg-accent text-foreground hover:scale-105 hover:shadow-[0_0_20px_var(--accent)] active:scale-95 transition-all duration-300"
+    aria-label="Volver a inicio"
+    draggable="false"
+  >
+    <ArrowUp />
+  </a>
+</div>
+
+<style>
+  @keyframes fadeInScroll {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  .scroll-to-top {
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeInScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 300px;
+  }
+</style>
