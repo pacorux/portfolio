@@ -1,0 +1,68 @@
+---
+import { ArrowDownIcon } from "@lucide/astro";
+---
+
+<section
+  class="flex flex-col items-center justify-center lg:justify-start h-dvh select-none overflow-hidden"
+>
+  <!-- Hero Background -->
+  <div
+    class="relative mask-[linear-gradient(to_bottom,black_30%,transparent_90%)]"
+  >
+    <!-- Layer 1 - Hero Video -->
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      class="h-full w-full object-contain lg:drop-shadow-[0_0_25px_rgba(244,118,59,0.6)]"
+    >
+      <source type="video/webm" src="/video/hero.webm" />
+    </video>
+
+    <!-- Layer 2 - Dot Pattern Background -->
+    <div
+      class="absolute inset-0 -z-20 opacity-40 bg-[radial-gradient(var(--accent)_1px,transparent_1px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+    >
+    </div>
+
+    <!-- Layer 3 - Light Effect Background -->
+    <div
+      class="not-lg:hidden absolute inset-0 -z-10 flex items-center justify-center overflow-hidden pointer-events-none opacity-20"
+    >
+      <div
+        class="w-96 h-96 -translate-x-30 bg-danger rounded-full blur-3xl animate-pulse animation-duration-[8s]"
+      >
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Content -->
+  <div
+    class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6"
+  >
+    <div class="absolute bottom-0 mb-[20vh]">
+      <h1
+        class="font-gluten font-extrabold text-6xl lg:text-7xl xl:text-8xl tracking-tight bg-linear-to-r from-accent to-danger bg-clip-text text-transparent duration-300"
+      >
+        Pacorux
+      </h1>
+
+      <p
+        class="font-medium text-md lg:text-xl xl:text-2xl uppercase tracking-[0.22em] duration-300"
+      >
+        Desarrollador Web
+      </p>
+
+      <div class="flex items-center justify-center mt-14">
+        <a
+          href="/#projects"
+          class="animate-bounce hover:scale-110 active:scale-95"
+        >
+          <ArrowDownIcon />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
